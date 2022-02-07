@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+    <title>WriteBook</title>
+  </head>
+
+  <body>
+
+    <div class="login">
+
+        <div class="login__heading">
+
+            <h1 class="heading-primary">Write<span class="heading-primary-right">Book</span></h1>
+            <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. eligendi inventore iste <br> porro officiis quasi nostrum, eum quia qplicabo a sint nam?</p>
+
+        </div>
+
+        <div class="login__field">
+
+            <div class="message--invalid"> Invalid Email or Password </div>
+
+            <form class="login__input">
+
+                <div class="message--request">Please login or signup to continue!</div>
+
+                <input type="text" class="login__input--username" placeholder="username">
+                <input type="password" class="login__input--pin" placeholder="password" maxlength="16"> 
+
+                <div class="input--button">
+
+                    <button class="btn btn--login">Log in</button>
+                    <button class="btn btn--signup">Sign up</button>
+
+                </div>            
+            </form>
+        </div>
+  
+    </div>
+
+    <main class="app hidden">
+
+      <div class="app__content">
+
+        <nav class="navigation">
+
+          <h2 class="heading-secondary">
+            <i class="fas fa-book"></i> Daily To-Do 
+          </h2>
+
+          <div class="time">Time <span class="time__value"></span> </div>
+
+          <div class="date">
+            Date <span class="date__value"></span>
+          </div>
+
+          <button class="btn-sign-out"> Sign-Out <i class="fas fa-sign-out-alt icon-sign-out"></i></button>  
+  
+        </nav>
+        
+        <div class="week">
+
+          <ul class="week__list">
+
+            <li class="week__day week__day--1">Sun</li>
+            <li class="week__day week__day--2">Mon</li>
+            <li class="week__day week__day--3">Tue</li>
+            <li class="week__day week__day--4">Thu</li>
+            <li class="week__day week__day--5">Fri</li>
+            <li class="week__day week__day--6">Sat</li>
+            <li class="week__day week__day--7">Sun</li>
+
+          </ul>
+          
+        </div>
+
+        <div class="main-container">
+
+          <div class="priority">
+
+            <div class="priority__content">
+  
+              <h3 class="heading-tertiary heading-tertiary--priority">Top Priorities</h3>
+
+              <form class="add-form">
+
+                <input type="text" class="add-input add-input--task" name="to-do" autocomplete="off" placeholder="Add New Task..." maxlength="80">
+                <input type="submit" class="btn-submit btn-submit--task" value="&rarr;">
+                <i class="fas fa-trash icon-trash icon-trash--task"></i>
+              </form>
+
+              <div class="container task-container">
+                <u class="todo-uTlist"></u>
+              </div>
+
+            </div>
+  
+          </div>
+
+          <div class="event">
+            <h3 class="heading-tertiary heading-tertiary--event">Events</h3>
+
+            <form class="add-form">
+
+              <input type="text" class="add-input add-input--event" name="to-do" autocomplete="off" placeholder="Add New Event..." maxlength="40">
+              <input type="submit" class="btn-submit btn-submit--event" value="&rarr;">
+              <i class="fas fa-trash icon-trash icon-trash--event"></i>
+            </form> 
+            
+            <div class="container event-container">
+
+              <u class="todo-uElist"></u>
+  
+            </div>
+            
+          </div>
+
+          <div class="notes">
+
+            <h3 class="heading-tertiary heading-tertiary--note">Notes</h3>
+            <form class="add-form">
+            
+              <input type="submit" class="btn-submit btn-submit--note" value="&darr;">
+              <textarea class="note-container add-input--note" name="notes" rows="4" cols="50"></textarea>
+            
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

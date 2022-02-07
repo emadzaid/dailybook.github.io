@@ -1,0 +1,6 @@
+Key Features:
+	> LogIn/SignUp
+	> NightMode (cozzy mode)
+	> Notepad (writeDown)
+	> Timer
+	> current Date

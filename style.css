@@ -1,0 +1,700 @@
+/* Variables */
+
+:root
+{
+    --main-bg-color: #eee;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-brown-1: #ddc8cf;
+    --color-brown-2: #ceadae;
+    --color-brown-3: #9a7b78;
+    --color-brown-4: #54363b;
+    --color-brown-5: #3a1e22;
+
+    --color-invalid: #F08080;
+
+}
+
+/* Variables ENDS ------------*/
+
+/* Basic Formatting */
+
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: 'Kaushan Script', cursive;
+    background-color: var(--main-bg-color);
+    color: var(--color-black); 
+    letter-spacing: 1px;
+}
+
+/* Basic Formatting ENDS ----------------- */
+
+/* Heading & Paragraphs Styles */
+
+.heading-primary
+{
+    font-weight: 100;
+    font-size: 6rem;
+    text-transform: capitalize;
+    color: var(--color-brown-2);
+    margin-bottom: 2rem;
+}
+
+.heading-primary-right
+{
+    color: var(--color-brown-3);
+}
+
+.heading-secondary
+{
+    font-weight: 100;
+    font-size: 4rem;
+    color: var(--color-brown-4);
+}
+
+
+.heading-tertiary
+{
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.heading-tertiary--priority
+{
+    color: var(--color-brown-1);
+}
+
+.heading-tertiary--note
+{
+    color: var(--color-brown-1);
+}
+
+.paragraph
+{
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Heading & Paragraphs Styles ENDS ------------------ */
+
+/* LOGIN/SIGN UP Styling */
+.login
+{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateY(-5rem);
+    /* display: none; */
+}
+
+
+
+.login__input
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 7rem;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: 1rem solid var(--color-brown-3);
+    outline-offset: 1rem;
+}
+
+.login__input--username, .login__input--pin
+{
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--color-brown-2);
+    color: var(--color-white);
+    outline: none;
+    margin-bottom: 2.5rem; 
+    transition: all .3s;
+    font-size: 1.5rem;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.login__input--username::placeholder, .login__input--pin::placeholder
+{
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: inherit;
+}
+
+.login__input--username:focus, .login__input--pin:focus
+{
+    border: none;
+    outline: none;
+    background-color: var(--color-brown-3);
+
+}
+
+.input--button
+{
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.btn
+{
+    padding: 1.5rem 4rem;
+    margin-left: 1rem; 
+    border-radius: 100rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .2s;
+    background-color: var(--color-brown-2);
+    border: none;
+    color: var(--color-white);
+    font-weight: bold;
+    font-family: inherit;
+    
+}
+
+.btn:hover,btn:active
+{
+    background-color: var(--color-brown-3);
+    transform: translateY(-1px);
+}
+
+/* LOGIN/SIGN UP Styling ENDS ------------ */
+
+/* Main App Styling Starts Here */
+
+.app
+{
+    padding: 3rem;
+    background-color: var(--color-brown-3);
+    box-sizing: border-box;
+}
+
+.app__content
+{  
+    background-color: var(--color-brown-2);
+    height: 93vh;
+}
+
+.navigation
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.date
+{
+    font-size: 2rem;
+    color: var(--color-brown-4);
+    font-weight: bold;
+    letter-spacing: 1rem;
+}
+
+.time
+{
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--color-brown-4);
+    letter-spacing: 1px;
+}
+
+.date__value
+{
+    background-color: var(--color-brown-1);
+    padding: 0rem .5rem;
+}
+
+.week
+{
+    font-size: 2rem;
+    color: var(--color-brown-4);
+    background-color: var(--color-brown-1);
+    padding: 0.5rem;
+}
+.week__list
+{
+    text-decoration: none;
+    list-style: none;  
+    display: flex;
+    justify-content: space-around;
+}
+
+.week__day
+{
+    display: inline-block;  
+    cursor: pointer;
+    user-select: none;
+}
+
+.main-container
+{
+    display: grid;
+    padding: 4rem;
+    grid-gap: 2rem;
+    grid-template-columns: 60%;
+}
+
+.todo-uTlist, .todo-uElist
+{
+    text-decoration: none;
+}
+
+.todo-item
+{
+    list-style: none;
+    position: relative;
+}
+
+.priority
+{
+    background-color: var(--color-brown-3);
+    padding: 2rem;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    color: var(--color-brown-4);
+    border-radius: 3px;
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem 2rem 0 rgba(0, 0, 0, 0.19);
+    /* overflow-y: scroll; */
+}
+
+.event
+{
+    background-color: var(--color-brown-1);
+    padding: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 3px;
+    color: var(--color-brown-4);
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem 2rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.notes
+{
+    background-color: var(--color-brown-3);
+    padding: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 3px;
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem 2rem 0 rgba(0, 0, 0, 0.19);
+}
+.add-form
+{
+ position: relative;
+}
+.add-input
+{
+    border: none;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    font-family: inherit;
+    background-color: var(--color-brown-1);
+    margin: 1rem 0;
+  
+}
+.add-input--event
+{
+    background-color: var(--color-brown-2);
+}
+
+.add-input::placeholder
+{
+    color: var(--color-brown-5);
+}
+
+.add-input:focus
+{
+    border: none;
+    outline: none;
+}
+
+.btn-submit
+{
+    font-family: inherit;
+    border: none;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+    background-color: var(--color-brown-1);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-submit:hover{
+    background-color: var(--color-brown-2);
+}
+
+.btn-submit--event
+{
+    background-color: var(--color-brown-2);
+}
+
+.btn-submit--event:hover
+{
+    background-color: var(--color-brown-3);
+}
+
+.container
+{
+    overflow-y: scroll;
+}
+
+.task-container
+{
+    height: 35rem;    
+}
+.event-container
+{
+    height: 20rem; 
+}
+.todo-list
+{
+    font-size: 2rem;
+    background-color: var(--color-brown-2);
+    border-bottom: 2px solid var(--color-brown-4);
+    padding: 0 1rem 0.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+} 
+.todo-list:last-child
+{
+    margin-bottom: 1rem;
+}
+
+.event-todo
+{
+      background-color: transparent;
+}
+.add-input--note
+{
+    resize: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    color: var(--color-brown-1);
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 90%;
+ 
+}
+
+.btn-submit--note
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Main App Styling Starts Here ENDS --------------- */
+
+/* Stand-alone Features */
+
+.message--invalid
+{
+    font-size: 2rem;
+    color: var(--color-invalid);
+    transition: all .3s;
+    text-align: center;
+    opacity: 0;
+    margin-bottom: 2rem;
+
+}
+
+.message--request
+{
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.5rem;
+
+}
+
+.hidden
+{
+    display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 .3rem var(--color-brown-4); 
+    border-radius: 1rem;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brown-4); 
+    border-radius: 1rem;
+  }
+  
+  .delete
+{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+}
+
+  .completed
+  {
+    text-decoration: line-through;
+  }
+
+  .icon-trash
+  {
+      font-size: 1.6rem;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+  }
+
+  .icon-sign-out
+  {
+      margin-left: .5rem;
+  }
+  .btn-sign-out
+  {
+      background-color: transparent;
+      font-family: inherit;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all .2s;
+      }
+
+  .btn-sign-out:hover
+  {
+      transform: translateY(-.4rem);
+  }
+
+  .btn_sign-out:focus
+  {
+      outline: none;
+  }
+
+  /* ---------- MEDIA QUERIES -------- */
+
+  /* @1200px width  */
+
+  @media screen and (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+
+    .paragraph
+    {
+        font-size: 1.8rem;
+    }
+  }
+
+    /* @950px width  */
+
+@media screen and (max-width: 950px) {
+
+    .login__input
+    {
+        outline: none;
+        outline-offset: 0;
+    }
+
+}
+ /* @900px width  */
+
+ @media screen and (max-width: 900px) {
+
+    .heading-secondary
+    {
+        font-size: 3rem;
+    }
+
+    .login__input
+    {
+        outline: 1rem solid var(--color-brown-3);
+        outline-offset: 1rem;
+    }
+
+    .heading-primary
+    {
+        text-align: center;
+    }
+    
+    .paragraph
+    {
+       text-align: center;
+    }
+
+    .login
+    {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    .date
+    {
+        font-size: 1.6rem;
+    }
+
+    .app
+    {
+        padding: 1.5rem;
+    }
+
+    .app__content
+    {  
+        height: auto;
+    }
+
+    .priority
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .event
+    {
+        grid-column-start: 2;
+        grid-column-end: 1;
+    }
+
+    .task-container
+    {
+        height: 25rem;    
+    }
+
+}
+
+ /* @700px width  */
+
+@media screen and (max-width: 700px) 
+{
+  html {
+      font-size: 40%;
+  }
+
+  .heading-primary {
+      font-size: 5rem;
+  }
+
+  .app__content
+  {  
+      height: 100vh;
+  }
+
+}
+
+ /* @600px width  */
+
+ @media screen and (max-width: 600px) 
+{
+    .time
+    {
+        display: none;
+    }
+
+    .add-input
+    {
+        font-size: 1.5rem;
+    }
+
+    .btn-submit
+    {
+        font-size: 1.5rem;
+    }
+
+    .event
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .notes
+    {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .app__content
+    {  
+        height: auto;
+    }
+}
+
+ /* @500px width  */
+
+@media screen and (max-width: 500px) 
+{
+    .heading-secondary
+    {
+        font-size: 2rem;    
+    }
+}
+
+ /* @400px width  */
+
+@media screen and (max-width: 400px) 
+{
+
+    .app
+    {
+        padding: 1.2rem;
+    }
+
+   .date
+   {
+       font-size: 1.2rem;
+       letter-spacing: .5rem;
+   }
+
+   .week
+   {
+       font-size: 1.7rem;
+   }
+
+   .paragraph
+   {
+       font-size: 1.5rem;
+   }
+}
+
+ /* @330px width  */
+
+@media screen and (max-width: 330px) 
+{
+    .heading-secondary
+    {
+        font-size: 1.8rem;
+    }
+    
+}
